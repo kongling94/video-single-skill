@@ -25,6 +25,7 @@ description: AI分镜提示词全知优化器·L5微表情与打斗质感版。�
 - `references/dialogue-scene-continuity.md`：对话戏与跨段一致性（角色声线锁定、末帧复位清单、本段道具清单、参考图分工、切镜条件、台词与画外音和倾听回声、插入镜头与空镜、分段与台词密度、身体接触动作链、修改后完整重发）。分镜以对话为主，或一场戏需要多个生成段拼接时必须读取。
 - `references/emotion-quick-reference.md`：50 情绪表演速查（白话面部、姿态、呼吸要点，已删除眼部特效写法）。人物近景、特写需要具体表演时读取。
 - `references/reference-asset-prep.md`：参考素材准备（官方素材数量与多视图规则、场景图与人物资产图的分工和绑定、场景初始图作首帧、多角度场景图标注、图上文字处理、平面图与九宫格用法、人物设定图检查）。用户提供或计划制作场景设定图、人物设定图时必须读取。
+- `references/episode-hook-rhythm.md`：单集开场、结尾钩子与声音转场（每集第一段的 1 / 3 / 5 秒开场检查、第二集起接住上集钩子、冷开场、每集最后一段的三类结尾钩子、同一生成段内的声音先入与后留，只调顺序和切点不拉长单集）。分镜是某一集的第一段或最后一段时必须读取。
 
 ## 核心原则
 
@@ -104,6 +105,7 @@ description: AI分镜提示词全知优化器·L5微表情与打斗质感版。�
 18. 场景与道具连续性风险：场景图中是否已有会被重复生成的道具、道具参考图是否与场景中的物体绑定为同一个、道具状态变化是否靠上传第二张图实现、双人手部动作是否跨切点、是否写明用哪只手、场景中是否有多个同类物体（门、椅子、杯子）而提示词只写了类别名
 19. 对话戏与跨段风险（文戏或多段拼接）：说话角色是否锁定声线（优先音频参考）、跨段是否复述上一段末帧状态、道具是否有来源和去向、是否逐句机械正反打、一句台词是否被拆到两个时间段、倾听者是否闭口且有可见回应、空镜是否承接正在进行的动作或声音、单段台词是否超量
 20. 参考素材风险（有设定图时）：多视图拼图是否超过 5 个主体、图上标题图注等文字是否已裁掉或写明处理方式、平面图是否被当成画面、人物图背景是否排除、图中附带道具是否在文本中绑定、是否有无头或残缺的展示格、是否有写实真人人脸
+21. 单集节奏风险（每集第一段或最后一段）：第 1 秒是否有动作或异常、3 秒内是否有疑问或情绪冲击、第 5 秒左右是否有转折、第二集起是否直接接住上集结尾且没有前情回顾、最后一段是否停在钩子处、钩子是否依赖画面文字、是否为凑钩子新增了未经确认的内容
 
 ### 阶段 3：待确认槽位
 
@@ -117,7 +119,7 @@ description: AI分镜提示词全知优化器·L5微表情与打斗质感版。�
 
 ### 阶段 4：重构与输出
 
-按下方“输出格式”输出完整结果。写镜头前读取 `references/micro-expression-engine.md`，含打斗时读取 `references/combat-texture-engine.md`。目标 AI 为 Seedance 2.5 时，同时读取 `references/seedance-2-5-adapter.md`，并执行两份引擎文件末尾的 Seedance 2.5 补充写法。多人镜头读取 `references/position-relationship-library.md`，在镜头描述中写清画面左右、前后景、高低、焦点和走位。写运镜前读取 `references/camera-movement-library.md`，每个运镜按起点、触发、运动、终点写全。每个镜头先按 `references/camera-grammar.md` 判断关系任务和情绪目标，再选景别、角度、构图、光线和运镜；标为“交给剪辑”的手法不写进提示词，需要时在该镜头后附一行“剪辑建议”。对手戏按 `references/scene-blocking-axis.md` 先定导演逻辑、景别链和关系轴线，再写正反打。用到场景或道具参考图、或动作跨镜头延续时，按 `references/scene-prop-continuity.md` 写素材分工、物体命名、手别和结束状态。用户提供场景设定图或人物设定图时，先按 `references/reference-asset-prep.md` 检查并写清素材指代。对话为主的戏或多段拼接时，按 `references/dialogue-scene-continuity.md` 锁定声线、复位末帧、列道具清单，并按切镜条件安排倾听反应和空镜；人物近景的表演从 `references/emotion-quick-reference.md` 选 2–3 个信号。需要片头、片尾或标题时，按 `references/opening-ending-title.md` 输出留好标题位置的干净画面段，标题、片尾文字和 logo 写在“剪辑建议”里由剪辑添加；排除内容中的“不要字幕、水印文字”是强制规则，任何情况下不得删改。
+按下方“输出格式”输出完整结果。写镜头前读取 `references/micro-expression-engine.md`，含打斗时读取 `references/combat-texture-engine.md`。目标 AI 为 Seedance 2.5 时，同时读取 `references/seedance-2-5-adapter.md`，并执行两份引擎文件末尾的 Seedance 2.5 补充写法。多人镜头读取 `references/position-relationship-library.md`，在镜头描述中写清画面左右、前后景、高低、焦点和走位。写运镜前读取 `references/camera-movement-library.md`，每个运镜按起点、触发、运动、终点写全。每个镜头先按 `references/camera-grammar.md` 判断关系任务和情绪目标，再选景别、角度、构图、光线和运镜；标为“交给剪辑”的手法不写进提示词，需要时在该镜头后附一行“剪辑建议”。对手戏按 `references/scene-blocking-axis.md` 先定导演逻辑、景别链和关系轴线，再写正反打。用到场景或道具参考图、或动作跨镜头延续时，按 `references/scene-prop-continuity.md` 写素材分工、物体命名、手别和结束状态。分镜是某一集的第一段或最后一段时，按 `references/episode-hook-rhythm.md` 做开场检查或结尾钩子，只调整顺序和切点，需要新增内容时列为待确认槽位。用户提供场景设定图或人物设定图时，先按 `references/reference-asset-prep.md` 检查并写清素材指代。对话为主的戏或多段拼接时，按 `references/dialogue-scene-continuity.md` 锁定声线、复位末帧、列道具清单，并按切镜条件安排倾听反应和空镜；人物近景的表演从 `references/emotion-quick-reference.md` 选 2–3 个信号。需要片头、片尾或标题时，按 `references/opening-ending-title.md` 输出留好标题位置的干净画面段，标题、片尾文字和 logo 写在“剪辑建议”里由剪辑添加；排除内容中的“不要字幕、水印文字”是强制规则，任何情况下不得删改。
 
 ## 输出格式（必须严格遵守）
 
