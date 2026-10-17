@@ -17,6 +17,7 @@ description: AI分镜提示词全知优化器·L5微表情与打斗质感版。�
 - `references/self-check-checklist.md`：自检清单。输出“六、自检清单”前必须读取并逐项核对。
 - `references/seedance-2-5-adapter.md`：Seedance 2.5 适配模块（官方已确认参数、任务类型与锁定规则、官方提示词结构、整数秒时间戳、声音符号、常见问题与合规）。目标 AI 为 Seedance 2.5，或输出多模型映射时必须读取。投喂 Seedance 2.5 的那一份提示词与主流程冲突时，以该文件为准。
 - `references/position-relationship-library.md`：人物位置关系库（左右、前后纵深、高低、框架遮挡、反射媒介、封闭空间与群像六条轴，36 种位置模板及视频写法）。分镜含两个及以上人物，或人物与观察者、框架、反射物之间存在关系时必须读取。
+- `references/camera-grammar.md`：镜头语法选择表（关系任务→镜头倾向、景别＝情绪距离、角度＝权力关系、构图、光线写物理事实、焦距景深写效果、运镜的情绪功能与可执行度、切点、对话戏法则、交给剪辑的部分、按画幅选构图）。写任何镜头前必须读取，用于决定每个镜头为什么这样拍。
 - `references/camera-movement-library.md`：运镜写法库（写运镜前的六件事、起点/触发/运动/终点四段式、三组易混运镜、互相冲突的写法、12 种运镜及其 Seedance 2.5 写法）。写任何镜头的运镜前必须读取。
 
 ## 核心原则
@@ -91,6 +92,7 @@ description: AI分镜提示词全知优化器·L5微表情与打斗质感版。�
 13. Seedance 2.5 专项风险（目标 AI 为 Seedance 2.5 时）：时间戳是否为连续整数秒、单段内容密度是否与时长匹配、是否用时间戳控制频率、素材指代与出场顺序是否一一对应、任务类型与 ratio/duration 是否冲突、台词写法是否容易诱发字幕、是否含水/波浪/回音等易致音频噪声的描述、是否有强烈情绪词落到眼睛上导致发光、是否含真人人脸参考素材、画面文字是否有拼写风险
 14. 位置关系风险（多人镜头）：人物站位是否只写了构图标签、画面左右是否明确、相邻镜头是否越轴、高低关系是否缺少机位配合、纵深关系是否缺少焦点、走位是否缺少结束站位、多人换位后是否可能错位
 15. 运镜风险：运镜是否缺起点、触发、终点；摇摄与横移、俯仰与升降、变焦与推拉是否混用；是否有互相冲突的约束（如推近又要求人物大小不变）；“向左/向右”是否缺参照；是否只写了设备（手持、稳定器、无人机）没写路径；镜头结束时是否带来了新信息
+16. 镜头语法风险：是否有无动机运镜、只拍说话者没有听者反应、整场景别不变、光线只写形容词、没有情绪高潮却强加特写或慢动作、角度运镜光效互相矛盾或堆砌、人物与环境割裂、标为“交给剪辑”的手法被写进提示词、构图与画幅不匹配（如竖屏左右并排三人以上）
 
 ### 阶段 3：待确认槽位
 
@@ -104,7 +106,7 @@ description: AI分镜提示词全知优化器·L5微表情与打斗质感版。�
 
 ### 阶段 4：重构与输出
 
-按下方“输出格式”输出完整结果。写镜头前读取 `references/micro-expression-engine.md`，含打斗时读取 `references/combat-texture-engine.md`。目标 AI 为 Seedance 2.5 时，同时读取 `references/seedance-2-5-adapter.md`，并执行两份引擎文件末尾的 Seedance 2.5 补充写法。多人镜头读取 `references/position-relationship-library.md`，在镜头描述中写清画面左右、前后景、高低、焦点和走位。写运镜前读取 `references/camera-movement-library.md`，每个运镜按起点、触发、运动、终点写全。
+按下方“输出格式”输出完整结果。写镜头前读取 `references/micro-expression-engine.md`，含打斗时读取 `references/combat-texture-engine.md`。目标 AI 为 Seedance 2.5 时，同时读取 `references/seedance-2-5-adapter.md`，并执行两份引擎文件末尾的 Seedance 2.5 补充写法。多人镜头读取 `references/position-relationship-library.md`，在镜头描述中写清画面左右、前后景、高低、焦点和走位。写运镜前读取 `references/camera-movement-library.md`，每个运镜按起点、触发、运动、终点写全。每个镜头先按 `references/camera-grammar.md` 判断关系任务和情绪目标，再选景别、角度、构图、光线和运镜；标为“交给剪辑”的手法不写进提示词，需要时在该镜头后附一行“剪辑建议”。
 
 ## 输出格式（必须严格遵守）
 
