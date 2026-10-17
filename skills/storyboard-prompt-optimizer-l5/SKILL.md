@@ -48,6 +48,7 @@ description: AI分镜提示词全知优化器·L5微表情与打斗质感版。�
 13. 光影自洽原则：光源方向决定阴影方向，阴影方向必须与光源方向相反。
 14. 微表情适配原则：表情必须与情绪、情境、动作阶段匹配，禁止面瘫、表情突变、情绪与动作矛盾。
 15. 打斗质感原则：打斗必须有攻防逻辑、力量传递、打击反馈、呼吸节奏，禁止广播体操式对打。
+16. 剧本内容不删减（强制规则）：用户的剧本通常由甲方提供，审核会逐项对照剧本，删减会被记录扣分。原剧本或原分镜里写到的剧情、台词、镜头、动作、停顿、铺垫、人物和道具，一律保留，不删除、不合并、不跨集挪动、不调换顺序。认为某处多余、拖沓或可以前移时，只在诊断报告里提示，并说明理由，由用户决定。优化时可以删的，只限自己添加的修饰和写法。
 
 ## 输入协议
 
@@ -127,7 +128,7 @@ description: AI分镜提示词全知优化器·L5微表情与打斗质感版。�
 
 ### 阶段 4：重构与输出
 
-按下方“输出格式”输出完整结果。写镜头前读取 `references/micro-expression-engine.md`，含打斗时读取 `references/combat-texture-engine.md`。目标 AI 为 Seedance 2.5 时，同时读取 `references/seedance-2-5-adapter.md`，并执行两份引擎文件末尾的 Seedance 2.5 补充写法。多人镜头读取 `references/position-relationship-library.md`，在镜头描述中写清画面左右、前后景、高低、焦点和走位。写运镜前读取 `references/camera-movement-library.md`，每个运镜按起点、触发、运动、终点写全。每个镜头先按 `references/camera-grammar.md` 判断关系任务和情绪目标，再选景别、角度、构图、光线和运镜；标为“交给剪辑”的手法不写进提示词，需要时在该镜头后附一行“剪辑建议”。对手戏按 `references/scene-blocking-axis.md` 先定导演逻辑、景别链和关系轴线，再写正反打。用到场景或道具参考图、或动作跨镜头延续时，按 `references/scene-prop-continuity.md` 写素材分工、物体命名、手别和结束状态。分镜是某一集的第一段或最后一段时，按 `references/episode-hook-rhythm.md` 做开场检查或结尾钩子，只调整顺序和切点，需要新增内容时列为待确认槽位。用户提供场景设定图或人物设定图时，先按 `references/reference-asset-prep.md` 检查并写清素材指代。对话为主的戏或多段拼接时，按 `references/dialogue-scene-continuity.md` 锁定声线、复位末帧、列道具清单，并按切镜条件安排倾听反应和空镜；人物近景的表演从 `references/emotion-quick-reference.md` 选 2–3 个信号；主角情绪在一段里变化两次及以上时，按 `references/emotion-arc-triggers.md` 安排表演顺序、功能位、触发器和强度。动作跨镜头延续、有移焦或群体反应时，按 `references/action-focus-crowd.md` 写动作阶段、焦点变化和分层反应，并做时间段负载检查。写人物表演时按 `references/acting-objectives.md` 先想清目标、策略和地位，再写成可见行为；特殊身体状态先写支撑点，缺依据时列为待确认槽位。需要转场或跨段接续时，按 `references/transition-routes.md` 选路线并写清转场方式；景别组合参考 `references/camera-grammar.md` 第二节。需要片头、片尾或标题时，按 `references/opening-ending-title.md` 输出留好标题位置的干净画面段，标题、片尾文字和 logo 写在“剪辑建议”里由剪辑添加；排除内容中的“不要字幕、水印文字”是强制规则，任何情况下不得删改。
+按下方“输出格式”输出完整结果。写镜头前读取 `references/micro-expression-engine.md`，含打斗时读取 `references/combat-texture-engine.md`。目标 AI 为 Seedance 2.5 时，同时读取 `references/seedance-2-5-adapter.md`，并执行两份引擎文件末尾的 Seedance 2.5 补充写法。多人镜头读取 `references/position-relationship-library.md`，在镜头描述中写清画面左右、前后景、高低、焦点和走位。写运镜前读取 `references/camera-movement-library.md`，每个运镜按起点、触发、运动、终点写全。每个镜头先按 `references/camera-grammar.md` 判断关系任务和情绪目标，再选景别、角度、构图、光线和运镜；标为“交给剪辑”的手法不写进提示词，需要时在该镜头后附一行“剪辑建议”。对手戏按 `references/scene-blocking-axis.md` 先定导演逻辑、景别链和关系轴线，再写正反打。用到场景或道具参考图、或动作跨镜头延续时，按 `references/scene-prop-continuity.md` 写素材分工、物体命名、手别和结束状态。分镜是某一集的第一段或最后一段时，按 `references/episode-hook-rhythm.md` 做开场检查或结尾钩子；调整顺序、切点或压短铺垫只在诊断中建议，不改动剧本，需要新增内容时列为待确认槽位。用户提供场景设定图或人物设定图时，先按 `references/reference-asset-prep.md` 检查并写清素材指代。对话为主的戏或多段拼接时，按 `references/dialogue-scene-continuity.md` 锁定声线、复位末帧、列道具清单，并按切镜条件安排倾听反应和空镜；人物近景的表演从 `references/emotion-quick-reference.md` 选 2–3 个信号；主角情绪在一段里变化两次及以上时，按 `references/emotion-arc-triggers.md` 安排表演顺序、功能位、触发器和强度。动作跨镜头延续、有移焦或群体反应时，按 `references/action-focus-crowd.md` 写动作阶段、焦点变化和分层反应，并做时间段负载检查。写人物表演时按 `references/acting-objectives.md` 先想清目标、策略和地位，再写成可见行为；特殊身体状态先写支撑点，缺依据时列为待确认槽位。需要转场或跨段接续时，按 `references/transition-routes.md` 选路线并写清转场方式；景别组合参考 `references/camera-grammar.md` 第二节。需要片头、片尾或标题时，按 `references/opening-ending-title.md` 输出留好标题位置的干净画面段，标题、片尾文字和 logo 写在“剪辑建议”里由剪辑添加；排除内容中的“不要字幕、水印文字”是强制规则，任何情况下不得删改。
 
 ## 输出格式（必须严格遵守）
 
@@ -194,6 +195,7 @@ description: AI分镜提示词全知优化器·L5微表情与打斗质感版。�
 
 ## 禁止行为
 
+- 禁止删除、合并、跨集挪动或调换原剧本和原分镜里的剧情、台词、镜头、动作、停顿与铺垫；只能在诊断中提示。
 - 禁止在最终提示词中插入长篇理论。
 - 禁止把“待确认槽位”直接编造为确定值。
 - 禁止忽略用户指定的目标 AI。
