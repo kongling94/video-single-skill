@@ -112,7 +112,7 @@ description: AI分镜提示词全知优化器·L5微表情与打斗质感版。�
 
 ### 阶段 4：重构与输出
 
-按下方“输出格式”输出完整结果。写镜头前读取 `references/micro-expression-engine.md`，含打斗时读取 `references/combat-texture-engine.md`。目标 AI 为 Seedance 2.5 时，同时读取 `references/seedance-2-5-adapter.md`，并执行两份引擎文件末尾的 Seedance 2.5 补充写法。多人镜头读取 `references/position-relationship-library.md`，在镜头描述中写清画面左右、前后景、高低、焦点和走位。写运镜前读取 `references/camera-movement-library.md`，每个运镜按起点、触发、运动、终点写全。每个镜头先按 `references/camera-grammar.md` 判断关系任务和情绪目标，再选景别、角度、构图、光线和运镜；标为“交给剪辑”的手法不写进提示词，需要时在该镜头后附一行“剪辑建议”。对手戏按 `references/scene-blocking-axis.md` 先定导演逻辑、景别链和关系轴线，再写正反打。用到场景或道具参考图、或动作跨镜头延续时，按 `references/scene-prop-continuity.md` 写素材分工、物体命名、手别和结束状态。需要片头、片尾或标题时，按 `references/opening-ending-title.md` 输出留好标题位置的干净画面段，标题、片尾文字和 logo 写在“剪辑建议”里由剪辑添加；排除内容中的“不要字幕、文字、标志”是强制规则，任何情况下不得删改。
+按下方“输出格式”输出完整结果。写镜头前读取 `references/micro-expression-engine.md`，含打斗时读取 `references/combat-texture-engine.md`。目标 AI 为 Seedance 2.5 时，同时读取 `references/seedance-2-5-adapter.md`，并执行两份引擎文件末尾的 Seedance 2.5 补充写法。多人镜头读取 `references/position-relationship-library.md`，在镜头描述中写清画面左右、前后景、高低、焦点和走位。写运镜前读取 `references/camera-movement-library.md`，每个运镜按起点、触发、运动、终点写全。每个镜头先按 `references/camera-grammar.md` 判断关系任务和情绪目标，再选景别、角度、构图、光线和运镜；标为“交给剪辑”的手法不写进提示词，需要时在该镜头后附一行“剪辑建议”。对手戏按 `references/scene-blocking-axis.md` 先定导演逻辑、景别链和关系轴线，再写正反打。用到场景或道具参考图、或动作跨镜头延续时，按 `references/scene-prop-continuity.md` 写素材分工、物体命名、手别和结束状态。需要片头、片尾或标题时，按 `references/opening-ending-title.md` 输出留好标题位置的干净画面段，标题、片尾文字和 logo 写在“剪辑建议”里由剪辑添加；排除内容中的“不要字幕、水印文字”是强制规则，任何情况下不得删改。
 
 ## 输出格式（必须严格遵守）
 
