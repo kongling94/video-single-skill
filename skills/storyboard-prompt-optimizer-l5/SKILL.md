@@ -20,7 +20,7 @@ description: AI分镜提示词全知优化器·L5微表情与打斗质感版。�
 - `references/camera-grammar.md`：镜头语法选择表（关系任务→镜头倾向、景别＝情绪距离、角度＝权力关系、构图、光线写物理事实、焦距景深写效果、运镜的情绪功能与可执行度、切点、对话戏法则、交给剪辑的部分、按画幅选构图）。写任何镜头前必须读取，用于决定每个镜头为什么这样拍。
 - `references/scene-blocking-axis.md`：场面调度与轴线（导演逻辑→景别链→关系轴线→机位图→正反打五步拆解，打斗、情感拉扯、争吵爆发、多人对峙四种对手戏写法，正反打的 Seedance 2.5 多镜头写法，姿态锁定，空间锚点与反应后切镜，分段拼接的结尾 1 秒技术全景）。分镜含两人及以上的对手戏时必须读取。
 - `references/scene-prop-continuity.md`：场景、道具与动作连续性（场景图道具重复叠加、切镜后站位或握手手别错乱、场景中多个同类物体被选错的成因与解决，以及写进提示词的位置）。使用场景或道具参考图、或动作跨镜头延续时必须读取。
-- `references/opening-ending-title.md`：片头、片尾与标题（官方资料中的标题动画、中文大字、logo 片头片尾、定格、向前 / 向后延长写法，标题与“不要字幕”的冲突处理，标题卡和片尾示例）。分镜需要片头、片名、集数标题、片尾、logo 或下集预告文字时必须读取。
+- `references/opening-ending-title.md`：片头、片尾与标题（官方资料中的标题动画、中文大字、logo 片头片尾、定格、向前 / 向后延长写法，视频只生成干净画面、标题在剪辑中添加的强制做法，标题背景和片尾示例）。分镜需要片头、片名、集数标题、片尾、logo 或下集预告文字时必须读取。
 - `references/camera-movement-library.md`：运镜写法库（写运镜前的六件事、起点/触发/运动/终点四段式、三组易混运镜、互相冲突的写法、12 种运镜及其 Seedance 2.5 写法）。写任何镜头的运镜前必须读取。
 
 ## 核心原则
@@ -112,7 +112,7 @@ description: AI分镜提示词全知优化器·L5微表情与打斗质感版。�
 
 ### 阶段 4：重构与输出
 
-按下方“输出格式”输出完整结果。写镜头前读取 `references/micro-expression-engine.md`，含打斗时读取 `references/combat-texture-engine.md`。目标 AI 为 Seedance 2.5 时，同时读取 `references/seedance-2-5-adapter.md`，并执行两份引擎文件末尾的 Seedance 2.5 补充写法。多人镜头读取 `references/position-relationship-library.md`，在镜头描述中写清画面左右、前后景、高低、焦点和走位。写运镜前读取 `references/camera-movement-library.md`，每个运镜按起点、触发、运动、终点写全。每个镜头先按 `references/camera-grammar.md` 判断关系任务和情绪目标，再选景别、角度、构图、光线和运镜；标为“交给剪辑”的手法不写进提示词，需要时在该镜头后附一行“剪辑建议”。对手戏按 `references/scene-blocking-axis.md` 先定导演逻辑、景别链和关系轴线，再写正反打。用到场景或道具参考图、或动作跨镜头延续时，按 `references/scene-prop-continuity.md` 写素材分工、物体命名、手别和结束状态。需要片头、片尾或标题时，按 `references/opening-ending-title.md` 输出单独的标题生成段或片尾写法，排除内容改为“除标题外不出现其他文字”。
+按下方“输出格式”输出完整结果。写镜头前读取 `references/micro-expression-engine.md`，含打斗时读取 `references/combat-texture-engine.md`。目标 AI 为 Seedance 2.5 时，同时读取 `references/seedance-2-5-adapter.md`，并执行两份引擎文件末尾的 Seedance 2.5 补充写法。多人镜头读取 `references/position-relationship-library.md`，在镜头描述中写清画面左右、前后景、高低、焦点和走位。写运镜前读取 `references/camera-movement-library.md`，每个运镜按起点、触发、运动、终点写全。每个镜头先按 `references/camera-grammar.md` 判断关系任务和情绪目标，再选景别、角度、构图、光线和运镜；标为“交给剪辑”的手法不写进提示词，需要时在该镜头后附一行“剪辑建议”。对手戏按 `references/scene-blocking-axis.md` 先定导演逻辑、景别链和关系轴线，再写正反打。用到场景或道具参考图、或动作跨镜头延续时，按 `references/scene-prop-continuity.md` 写素材分工、物体命名、手别和结束状态。需要片头、片尾或标题时，按 `references/opening-ending-title.md` 输出留好标题位置的干净画面段，标题、片尾文字和 logo 写在“剪辑建议”里由剪辑添加；排除内容中的“不要字幕、文字、标志”是强制规则，任何情况下不得删改。
 
 ## 输出格式（必须严格遵守）
 
