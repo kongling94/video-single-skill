@@ -158,6 +158,8 @@ description: AI分镜提示词全知优化器·L5微表情与打斗质感版。�
 ```
 生成参数：resolution=1080p，ratio=16:9，duration=15，output_format=mp4
 
+含两人及以上时，在“一句话概述”之后加“人物设定：”（外观锚点、用参照物写身高关系）和“站位设定：”（每人画面左右、朝向、相对位置、看向谁），每个时间段写结束状态；具体按 `references/scene-blocking-axis.md` 第六节。
+
 ### 四、多模型适配映射
 
 为 Seedance 2.5、Sora、可灵 Kling、Runway Gen-3、Midjourney v6 分别给出优化后的提示词。每个模型必须用独立文本框输出，并附简短中文解释。Seedance 2.5 版本按 `references/seedance-2-5-adapter.md` 的结构写；目标 AI 本身就是 Seedance 2.5 时，此处不重复输出 Seedance 版本。
