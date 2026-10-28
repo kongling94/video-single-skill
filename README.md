@@ -4,9 +4,11 @@
 
 ## Skills
 
-- [storyboard-prompt-optimizer-l5](skills/storyboard-prompt-optimizer-l5/SKILL.md)：AI分镜提示词全知优化器·L5微表情与打斗质感版。诊断原始分镜提示词，输出待确认槽位、每镜独立文本框的 L5 优化版（默认 Seedance 2.5）、八层反提示词与自检清单。
+- [storyboard-prompt-optimizer-l5](skills/storyboard-prompt-optimizer-l5/SKILL.md)：将剧本或原分镜转为独立文本框的视频提示词（默认 Seedance 2.5）。保留原稿全部内容，单集一次完整交付；默认只报告实际问题和核对结果，详细诊断、评分及专项库按需读取。
 
 ## 优化记录
+
+- [v1.38 规则统一与读取减负](docs/优化记录-v1.38-规则统一与读取减负.md)：统一确认、变焦和原稿重复政策；常用规则集中、详细库按需读取，普通 Seedance 文戏默认工作集约 1.30 万字符，较旧版最低必读三文件减少约 64%。
 
 - [v1.1 Seedance 2.5 适配](docs/优化记录-v1.1-Seedance2.5.md)：依据火山方舟 Seedance 2.5 官方提示词指南与教程，新增 Seedance 2.5 适配模块。
 - [v1.2 人物位置关系](docs/优化记录-v1.2-位置关系.md)：依据位置关系提示词样例（36 条），新增人物位置关系库并接入诊断、槽位、写作和自检。

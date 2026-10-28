@@ -1,6 +1,6 @@
 # 运镜写法库
 
-镜头里有固定、缓慢推近以外的运镜时读取：先读第一至五节和第八节，第六节只查本段用到的那一种运镜（读取路由见 SKILL.md，v1.30）。选哪种运镜、它服务什么情绪、可执行度如何，见 `references/camera-grammar.md`。
+仅在运镜类型易混、组合运镜或路径复杂时按 SKILL.md 路由查第一至五节及第六节选用的条目。普通运镜使用 production-core.md，不自动通读本库。选哪种运镜、它服务什么情绪、可执行度如何，见 `references/camera-grammar.md`。
 
 来源：用户提供的一套运镜教程图（12 种运镜，原图为第 2–11 页）。教程的方法和检查点用本 skill 的话重新整理；每种运镜另给一份按 Seedance 2.5 官方规则改写的写法（依据 `references/seedance-2-5-adapter.md`）。
 
