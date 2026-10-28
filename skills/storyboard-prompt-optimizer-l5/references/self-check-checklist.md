@@ -13,7 +13,7 @@
 | 道具交接、数量、占手、空间容量 | scene-prop-continuity.md 对应章节 |
 | 长台词覆盖、段内不断声与跨任务衔接 | dialogue-scene-continuity.md 第四至八节 |
 | 具体情绪、特殊身体状态、群戏、打斗 | 入口已命中的表演/动作/打斗参考对应章节 |
-| 特殊转场及验收 | transition-routes.md 对应路线；只查已选用的 transition-catalog.md 条目 |
+| 特殊转场、可选反应补镜及验收 | transition-routes.md 对应路线；路线 5 核对适用/授权、两侧接缝、净时长及待实片状态；只查已选用的 transition-catalog.md 条目 |
 | 标题和素材准备、关键帧/白模 | opening-ending-title.md、reference-asset-prep.md、适配模块第七八节 |
 | 时长不足或润色 | script-polish-capacity.md；删改权限仍由入口决定 |
 | 接续、版本和下游影响 | project-state.md，核对采用与验证状态，不将生成偏差改为故事事实 |

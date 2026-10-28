@@ -31,7 +31,7 @@ description: Use when a user asks for 剧本转视频提示词、剧本转分镜
 | 动机、因果或信息揭示不清 | [story-to-shot-intent.md](references/story-to-shot-intent.md) |
 | 跨集接续、复用状态资产、返修影响后续或存在版本冲突 | [project-state.md](references/project-state.md)；同一集普通连续分段在内部维护状态即可，不强制建库 |
 | 制作/裁切资产、多视图、多状态、平面图、关键帧或白模 | [reference-asset-prep.md](references/reference-asset-prep.md) 对应章节；关键帧可查 [keyframe-workflow-notes.md](references/keyframe-workflow-notes.md)；模型特殊任务查适配模块第七、八节 |
-| 剧本指定特殊转场，或已授权升级转场 | [transition-routes.md](references/transition-routes.md) 对应路线和验收；[transition-catalog.md](references/transition-catalog.md) 只读选用条目 |
+| 剧本指定特殊转场、首尾帧难衔接拟采用反应补镜，或已授权升级转场 | [transition-routes.md](references/transition-routes.md) 对应路线和验收；[transition-catalog.md](references/transition-catalog.md) 只读选用条目 |
 | 开场/结尾节奏有具体问题或用户要求钩子设计 | [episode-hook-rhythm.md](references/episode-hook-rhythm.md)；仅诊断建议，不能自动加戏或挪动原稿 |
 | 用户要求片头片尾、标题、logo | [opening-ending-title.md](references/opening-ending-title.md) |
 | 打斗 | [combat-texture-engine.md](references/combat-texture-engine.md) |
