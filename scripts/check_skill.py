@@ -53,9 +53,18 @@ def main():
         old = subprocess.check_output(['git', 'show', f'{args.base}:{adapter_path}'],
                                       cwd=REPO).decode('utf-8')
         current = (REPO / adapter_path).read_text(encoding='utf-8')
-        for heading in ['## 一、', '## 二、', '## 四、', '## 五、', '## 六、', '## 十、']:
+        for heading in ['## 一、', '## 二、', '## 四、', '## 五、', '## 十、']:
             if section(old, heading) != section(current, heading):
                 problems.append(f'Recorded adapter contract changed: {heading}')
+        # Keep the original official/experience text intact. The reviewed project
+        # policy is an explicit appended block, not an exemption for arbitrary edits.
+        eye_section = section(current, '## 六、')
+        policy_marker = '\n\n项目眼部防护范围（v1.38 补充，项目约定）：'
+        original, marker, addition = eye_section.partition(policy_marker)
+        if original != section(old, '## 六、'):
+            problems.append('Original adapter section VI changed')
+        if not marker or not addition.strip() or '\n\n' in addition:
+            problems.append('Expected one explicit project eye-protection policy block')
         details = (ROOT / 'references/seedance-special-tasks.md').read_text(encoding='utf-8')
         # The only migration edit is qualifying a reference to the source file.
         details = details.replace('见 seedance-2-5-adapter.md 第五节静默预算', '见第五节静默预算')
