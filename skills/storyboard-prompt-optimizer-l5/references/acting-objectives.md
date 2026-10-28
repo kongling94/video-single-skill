@@ -1,6 +1,6 @@
 # 表演目标与行为
 
-写有人物表演的镜头时读取本文件，用来决定人物为什么这样动：想要什么、用什么办法争取、身体怎么表现地位和距离。单个情绪的面部写法查 `references/emotion-quick-reference.md`，情绪变化的顺序和触发查 `references/emotion-arc-triggers.md`。
+普通表演使用 production-core.md；策略不明或特殊身体状态需要设计时按 SKILL.md 查对应章节。单个情绪的面部写法查 `references/emotion-quick-reference.md`，情绪变化的顺序和触发查 `references/emotion-arc-triggers.md`。
 
 来源：用户提供的《表演系统 ACTING》（迈斯纳体系，原文针对 Seedance 2.0）和《100 种情绪表达·分类版》。逐条对照《Doubao Seedance 2.5 提示词指南》（下称指南）核对，标注“官方写法”“经验”或“推断”。核对全文见 `docs/优化记录-v1.17-表演目标与情绪扩充.md`。
 

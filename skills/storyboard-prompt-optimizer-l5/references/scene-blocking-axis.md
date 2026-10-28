@@ -1,6 +1,6 @@
 # 场面调度与轴线
 
-分镜含两个及以上人物的对手戏（对话、争吵、对峙、打斗）时读取第一、二、六、七节；跨段拼接或要用空间锚点时再读第八节；第三、四、五节在需要具体戏型参考时查（读取路由见 SKILL.md，v1.30）。它把一场戏从“导演逻辑”拆到“机位和正反打”，与 `references/position-relationship-library.md`（站位）、`references/camera-grammar.md`（景别、角度的选择）、`references/camera-movement-library.md`（运镜写法）配合使用。
+普通两人对话使用 production-core.md；复杂多人换位或图文空间问题按 SKILL.md 查第九、十节，具体戏型与示例按需查。它把一场戏从“导演逻辑”拆到“机位和正反打”，与 `references/position-relationship-library.md`（站位）、`references/camera-grammar.md`（景别、角度的选择）、`references/camera-movement-library.md`（运镜写法）配合使用。
 
 来源：用户提供的 4 张《AI 短剧镜头语言必修课》案例图（古寺山门雨夜高手对打、古代爱情戏廊下灯火眼神拉扯、客厅家庭争吵爆发戏、城阙高台多人三角对峙）。方法用本 skill 的话重新整理。第五、六节依据火山方舟《Doubao Seedance 2.5 提示词指南》与《火山方舟 Seedance 2.5 教程》中的站位、多人、过肩和一致性相关内容写成。
 
