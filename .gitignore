@@ -1,0 +1,15 @@
+
+# Local episode material; never commit assets or scripts.
+/docs/22集-*.md
+/docs/佟家*.md
+/docs/补充验证-佟家*.md
+/docs/连续性验证-*.md
+/docs/验证记录-分支-逐镜连续性.md
+*.[pP][nN][gG]
+*.[jJ][pP][gG]
+*.[jJ][pP][eE][gG]
+*.webp
+*.gif
+*.mp4
+*.mov
+*.txt
