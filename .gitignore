@@ -1,5 +1,5 @@
 
-# Local episode material; never commit assets or scripts.
+# Local episode records and media assets (Python tooling remains tracked).
 /docs/22集-*.md
 /docs/佟家*.md
 /docs/补充验证-佟家*.md
